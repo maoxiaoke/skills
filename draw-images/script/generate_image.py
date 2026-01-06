@@ -97,6 +97,9 @@ def extract_image_data(response: dict) -> tuple[bytes, str]:
 def save_image(image_bytes: bytes, output_path: str) -> str:
     """Save image bytes to file."""
     try:
+        parent_dir = os.path.dirname(output_path)
+        if parent_dir:
+            os.makedirs(parent_dir, exist_ok=True)
         with open(output_path, "wb") as f:
             f.write(image_bytes)
         return output_path
