@@ -19,7 +19,7 @@ def get_api_key():
     return api_key
 
 
-def generate_image(prompt: str) -> dict:
+def generate_image(prompt: str, aspect_ratio: str = None) -> dict:
     """Call Gemini API to generate an image."""
     api_key = get_api_key()
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
@@ -29,14 +29,21 @@ def generate_image(prompt: str) -> dict:
         "Content-Type": "application/json",
     }
 
+    generation_config = {
+        "responseModalities": ["TEXT", "IMAGE"]
+    }
+
+    if aspect_ratio:
+        generation_config["imageConfig"] = {
+            "aspectRatio": aspect_ratio
+        }
+
     payload = {
         "contents": [{
             "role": "user",
             "parts": [{"text": prompt}]
         }],
-        "generationConfig": {
-            "responseModalities": ["TEXT", "IMAGE"]
-        }
+        "generationConfig": generation_config
     }
 
     data = json.dumps(payload).encode("utf-8")
@@ -112,6 +119,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate images using Gemini API")
     parser.add_argument("prompt", help="Text prompt for image generation")
     parser.add_argument("output", help="Output file path")
+    parser.add_argument("--aspect-ratio", help="Image aspect ratio (e.g., 16:9, 4:3, 1:1)")
     args = parser.parse_args()
 
     if not args.prompt.strip():
@@ -120,7 +128,7 @@ def main():
 
     print(f"Generating image for: {args.prompt[:50]}{'...' if len(args.prompt) > 50 else ''}")
 
-    response = generate_image(args.prompt)
+    response = generate_image(args.prompt, args.aspect_ratio)
     image_bytes, _ = extract_image_data(response)
 
     save_image(image_bytes, args.output)
