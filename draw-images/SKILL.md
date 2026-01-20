@@ -24,14 +24,22 @@ If it is not set, return `GEMINI_API_KEY is not set. Please set it in your envir
 To generate images with Nano Banana, you can use the following command:
 
 ```bash
-python script/generate_image.py "Your prompt here" proper_name.png
+python script/generate_image.py "Your prompt here" proper_name.png --aspect-ratio 16:9
 ```
 
-Replace `"Your prompt here"` with your desired prompt and `proper_name.png` with the desired output file name.
+You should: 
+- Replace `"Your prompt here"` with your desired prompt with specific, clear and descriptive details.
+- Replace `proper_name.png` with the appropriate file name that fully describes the image.
+- (Optional) `--aspect-ratio`: Specify the aspect ratio of the image. Default is 16:9.
 
 **What the script does**
 - Sends a request to Nano Banana's API with the provided prompt.
 - Saves the image data to the specified output file.
+
+**Aspect Ratio**
+
+Choose the aspect ratio that best suits your needs. Common aspect ratios include 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9 and 21:9.
+Make sure no content is cropped or distorted.
 
 ## How to generate satisfactory images
 
