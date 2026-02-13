@@ -32,11 +32,15 @@ Claude will follow the complete deployment process automatically.
 # Set your API token
 export CLOUDFLARE_DNS_API_TOKEN="your-cloudflare-api-token"
 
-# Run the DNS setup
+# Get CNAME target from Vercel
+vercel domains add myapp.nazha.co
+# Vercel will output: CNAME myapp.nazha.co [project-specific-target].vercel-dns-017.com
+
+# Run the DNS setup with the project-specific CNAME target
 node ~/.claude/skills/deploy-project/setup-cloudflare-dns.js \
   myapp \
   nazha.co \
-  cname.vercel-dns.com
+  [project-specific-target].vercel-dns-017.com
 ```
 
 ### Option 3: Manual Step-by-Step
@@ -58,13 +62,14 @@ git push -u origin main
 # 3. Deploy to Vercel
 vercel --yes --prod
 
-# 4. Add domain to Vercel
-vercel domains add myapp.nazha.co
+# 4. Add domain to Vercel and get CNAME target
+CNAME_TARGET=$(vercel domains add myapp.nazha.co 2>&1 | grep -oE '[a-f0-9]+\.vercel-dns-[0-9]+\.com' | head -1)
+# Or copy from Vercel dashboard if domain already exists
 
 # 5. Configure DNS (automated)
 export CLOUDFLARE_DNS_API_TOKEN="your-cloudflare-api-token"
 node ~/.claude/skills/deploy-project/setup-cloudflare-dns.js \
-  myapp nazha.co cname.vercel-dns.com
+  myapp nazha.co "$CNAME_TARGET"
 
 # Done! Your app is live at:
 # - https://myapp.vercel.app
@@ -84,9 +89,10 @@ The `setup-cloudflare-dns.js` script:
 
 ## Usage Examples
 
-### Basic CNAME for Vercel
+### Basic CNAME for Vercel (Recommended)
 ```bash
-node setup-cloudflare-dns.js myapp nazha.co cname.vercel-dns.com
+# Get project-specific CNAME from Vercel dashboard or CLI output
+node setup-cloudflare-dns.js myapp nazha.co 9931e99872af7dfe.vercel-dns-017.com
 ```
 
 ### With Cloudflare Proxy (DDoS protection, CDN)
@@ -161,7 +167,7 @@ curl -I https://myapp.nazha.co
 Expected:
 - GitHub repo is public and contains your code
 - Vercel shows "Ready" status
-- DNS returns `cname.vercel-dns.com`
+- DNS returns project-specific CNAME target (e.g., `9931e99872af7dfe.vercel-dns-017.com`)
 - HTTPS returns `HTTP/2 200` with `server: Vercel`
 
 ## Troubleshooting
@@ -171,8 +177,8 @@ Expected:
 # Check existing record
 dig myapp.nazha.co CNAME +short
 
-# Update with --force flag
-node setup-cloudflare-dns.js myapp nazha.co cname.vercel-dns.com --force
+# Update with --force flag (use project-specific CNAME from Vercel)
+node setup-cloudflare-dns.js myapp nazha.co 9931e99872af7dfe.vercel-dns-017.com --force
 ```
 
 ### Vercel Domain Not Verified

@@ -136,14 +136,45 @@ Aliased: https://{project}.vercel.app
 
 ## Step 4: Set Up Custom Domain (Automated)
 
-### 4a. Add Domain to Vercel
+### 4a. Add Domain to Vercel and Extract CNAME Target
 
 ```bash
 # Add custom domain to Vercel project
 vercel domains add {project}.nazha.co
 ```
 
-Vercel will show: `CNAME {project}.nazha.co cname.vercel-dns.com`
+**Vercel will output the recommended DNS configuration.**
+
+Example output:
+```
+> Success! Domain {project}.nazha.co added to project {project}.
+WARN! This domain is not configured properly. To configure it you should either:
+  a) Set the following record on your DNS provider to continue:
+     `CNAME {project}.nazha.co 9931e99872af7dfe.vercel-dns-017.com` [recommended]
+```
+
+**Important:** Vercel generates a **project-specific CNAME target** (e.g., `9931e99872af7dfe.vercel-dns-017.com`). This is better than the generic `cname.vercel-dns.com`.
+
+### 4a-1. Extract CNAME Target Automatically (Optional)
+
+To automatically extract the CNAME target from Vercel's output:
+
+```bash
+# Method 1: Parse the output
+CNAME_TARGET=$(vercel domains add {project}.nazha.co 2>&1 | grep -oE '[a-f0-9]+\.vercel-dns-[0-9]+\.com' | head -1)
+
+# Method 2: Check if already added, view in Vercel dashboard
+# If domain already exists, visit:
+# https://vercel.com/[your-account]/[project]/settings/domains
+# Click on the domain to see the recommended CNAME
+
+echo "CNAME target: $CNAME_TARGET"
+```
+
+If extraction fails or domain already exists:
+1. Visit Vercel dashboard → Project → Settings → Domains
+2. Click on your domain to see "DNS Change Recommended"
+3. Copy the CNAME target value (e.g., `9931e99872af7dfe.vercel-dns-017.com`)
 
 ### 4b. Create DNS Record (Automated with Script)
 
@@ -164,11 +195,20 @@ export CLOUDFLARE_DNS_API_TOKEN="your-cloudflare-api-token"
 **Run the DNS setup script:**
 
 ```bash
+# Use the CNAME target from Vercel (either extracted or copied from dashboard)
 node ~/.claude/skills/deploy-project/setup-cloudflare-dns.js \
   {project} \
   nazha.co \
-  cname.vercel-dns.com
+  9931e99872af7dfe.vercel-dns-017.com
+
+# Or use the variable if you extracted it automatically
+node ~/.claude/skills/deploy-project/setup-cloudflare-dns.js \
+  {project} \
+  nazha.co \
+  "$CNAME_TARGET"
 ```
+
+**Note:** Replace `9931e99872af7dfe.vercel-dns-017.com` with the actual CNAME target from your Vercel output.
 
 **Script Features:**
 - ✅ Validates inputs and authentication
@@ -211,9 +251,11 @@ If automated script fails, you can set up DNS manually:
 5. Fill in:
    - Type: CNAME
    - Name: {project}
-   - Target: cname.vercel-dns.com
+   - Target: Use the CNAME target from Vercel (e.g., `9931e99872af7dfe.vercel-dns-017.com`)
    - Proxy status: DNS only (grey cloud)
 6. Click "Save"
+
+**Important:** Always use the **project-specific CNAME target** shown in your Vercel dashboard, not the generic `cname.vercel-dns.com`.
 
 ## Verification Checklist
 
