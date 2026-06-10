@@ -1,7 +1,7 @@
 ---
 name: restate
 description: Repeat what the user says to ensure that everyone has a consistent understanding
-version: "1.0.1"
+version: "1.0.4"
 ---
 
 当用户提出需求或要求进行 BugFix，应遵循以下步骤：
