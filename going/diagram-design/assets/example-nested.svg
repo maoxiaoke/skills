@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 656" width="1080" height="656">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+
+  <!-- Page background (paper) + full-bleed dot grid -->
+  <rect width="1080" height="656" fill="#f5f5f5"/>
+  <rect width="1080" height="656" fill="url(#dots)" opacity="0.55"/>
+
+  <!-- HTML wrapper redrawn: eyebrow + title -->
+  <text x="40" y="48" fill="#4f5d75" font-size="11" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">NESTED · DIAGRAM DESIGN</text>
+  <text x="40" y="86" fill="#2d3142" font-size="32" font-weight="400" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" letter-spacing="-0.02em">The CLAUDE.md Hierarchy</text>
+
+  <!-- Original diagram (viewBox 0 0 1000 500), positioned below the title -->
+  <g transform="translate(40,112)">
+        <defs>
+          <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="rgba(45,49,66,0.10)"/>
+          </pattern>
+        </defs>
+
+        <rect width="1000" height="500" fill="#f5f5f5"/>
+        <rect width="1000" height="500" fill="url(#dots)" opacity="0.55"/>
+
+        <!-- Level 1: ~/.claude/ (global) — outermost -->
+        <rect x="40" y="60" width="920" height="380" rx="8" fill="rgba(45,49,66,0.015)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <!-- Level 2: ~/vault/ -->
+        <rect x="72" y="96" width="856" height="308" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+        <!-- Level 3: /business -->
+        <rect x="104" y="132" width="792" height="236" rx="8" fill="rgba(45,49,66,0.025)" stroke="rgba(45,49,66,0.45)" stroke-width="1"/>
+        <!-- Level 4: /marketing -->
+        <rect x="136" y="168" width="728" height="164" rx="8" fill="rgba(45,49,66,0.03)" stroke="#4f5d75" stroke-width="1"/>
+        <!-- Level 5: /project — innermost, coral focal -->
+        <rect x="168" y="204" width="664" height="92" rx="8" fill="rgba(235,108,54,0.06)" stroke="#eb6c36" stroke-width="1"/>
+
+        <!-- Level labels on paper-colored masks -->
+        <rect x="56" y="52" width="188" height="16" fill="#f5f5f5"/>
+        <text x="64" y="64" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em">~/.claude/ (global)</text>
+
+        <rect x="88" y="88" width="148" height="16" fill="#f5f5f5"/>
+        <text x="96" y="100" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em">~/vault/ (notes)</text>
+
+        <rect x="120" y="124" width="96" height="16" fill="#f5f5f5"/>
+        <text x="128" y="136" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em">/business</text>
+
+        <rect x="152" y="160" width="108" height="16" fill="#f5f5f5"/>
+        <text x="160" y="172" fill="#2d3142" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em">/marketing</text>
+
+        <rect x="184" y="196" width="88" height="16" fill="#f5f5f5"/>
+        <text x="192" y="208" fill="#eb6c36" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em" font-weight="600">/project</text>
+
+        <!-- File-icon glyphs (simple rect with folded corner) inside each level -->
+        <!-- Glyph in level 1 (bottom-right area of outer ring) -->
+        <g transform="translate(908, 408)">
+          <path d="M0 0 L16 0 L20 4 L20 20 L0 20 Z" fill="#f5f5f5" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+          <path d="M16 0 L16 4 L20 4" fill="none" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+        </g>
+        <!-- Glyph in level 2 ring -->
+        <g transform="translate(876, 372)">
+          <path d="M0 0 L16 0 L20 4 L20 20 L0 20 Z" fill="#f5f5f5" stroke="rgba(45,49,66,0.40)" stroke-width="1"/>
+          <path d="M16 0 L16 4 L20 4" fill="none" stroke="rgba(45,49,66,0.40)" stroke-width="1"/>
+        </g>
+        <!-- Glyph in level 3 ring -->
+        <g transform="translate(844, 336)">
+          <path d="M0 0 L16 0 L20 4 L20 20 L0 20 Z" fill="#f5f5f5" stroke="rgba(45,49,66,0.50)" stroke-width="1"/>
+          <path d="M16 0 L16 4 L20 4" fill="none" stroke="rgba(45,49,66,0.50)" stroke-width="1"/>
+        </g>
+        <!-- Glyph in level 4 ring -->
+        <g transform="translate(812, 300)">
+          <path d="M0 0 L16 0 L20 4 L20 20 L0 20 Z" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+          <path d="M16 0 L16 4 L20 4" fill="none" stroke="#4f5d75" stroke-width="1"/>
+        </g>
+
+        <!-- Innermost label — human readable -->
+        <text x="500" y="248" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">CLAUDE.md</text>
+        <text x="500" y="272" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.08em">inherits every level above</text>
+
+        <!-- Annotation top-right: italic callout with curved arrow -->
+        <text x="904" y="36" fill="#2d3142" font-size="14" font-style="italic" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" text-anchor="end">no imports, no configuration</text>
+        <path d="M 820 44 Q 700 84 520 216" fill="none" stroke="rgba(45,49,66,0.40)" stroke-width="1" stroke-dasharray="4,3"/>
+        <circle cx="520" cy="216" r="2" fill="#2d3142"/>
+
+        <!-- Annotation bottom-left: italic callout -->
+        <text x="40" y="484" fill="#4f5d75" font-size="14" font-style="italic" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">structure IS the index</text>
+  </g>
+</svg>

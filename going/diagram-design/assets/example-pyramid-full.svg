@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 1092" width="1128" height="1092">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+
+  <!-- Page background (paper) -->
+  <rect width="1128" height="1092" fill="#f5f5f5"/>
+
+  <!-- Header: eyebrow + title + subtitle -->
+  <text x="40" y="48" fill="#4f5d75" font-size="10.5" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">PYRAMID · DIAGRAM DESIGN</text>
+  <text x="40" y="92" fill="#2d3142" font-size="38" font-weight="400" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" letter-spacing="-0.02em">Content pyramid · what compounds</text>
+  <text x="40" y="121" fill="#4f5d75" font-size="16" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="40" y="121">Four layers of output, ordered by how rarely they ship</tspan>
+    <tspan x="40" y="146">and how far they travel. The base keeps you present.</tspan>
+    <tspan x="40" y="171">The apex defines the body of work — and it's the only</tspan>
+    <tspan x="40" y="196">layer anyone quotes back a decade later.</tspan>
+  </text>
+
+  <!-- Diagram container -->
+  <rect x="40.5" y="236.5" width="1047" height="547" rx="8" fill="#ececec" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+
+  <!-- Diagram (original inline SVG content, repositioned inside container) -->
+  <g transform="translate(64,260)">
+        <defs>
+          <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="rgba(45,49,66,0.10)"/>
+          </pattern>
+        </defs>
+
+        <rect width="1000" height="500" fill="#f5f5f5"/>
+        <rect width="1000" height="500" fill="url(#dots)" opacity="0.55"/>
+
+        <!-- Left axis: direction of rarity -->
+        <line x1="100" y1="40" x2="100" y2="320" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <polygon points="96,40 104,40 100,28" fill="rgba(45,49,66,0.45)"/>
+        <text x="80" y="216" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em" text-anchor="middle" transform="rotate(-90 80 216)">RARER · FEWER · COMPOUNDS ↑</text>
+
+        <!-- Base layer: Short posts -->
+        <polygon points="244,280 756,280 820,344 180,344" fill="#ececec" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+        <text x="500" y="308" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Short posts</text>
+        <text x="500" y="324" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">daily · ~200 words</text>
+        <text x="836" y="316" fill="#7a8399" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">~240/yr</text>
+
+        <!-- L3: Essays -->
+        <polygon points="308,216 692,216 756,280 244,280" fill="#ececec" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+        <text x="500" y="244" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Essays</text>
+        <text x="500" y="260" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">weekly · 800–1,500 words</text>
+        <text x="776" y="252" fill="#7a8399" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">~48/yr</text>
+
+        <!-- L2: Long-form guides -->
+        <polygon points="372,152 628,152 692,216 308,216" fill="#ececec" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+        <text x="500" y="180" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Long-form guides</text>
+        <text x="500" y="196" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">quarterly · 4,000+ words</text>
+        <text x="716" y="188" fill="#7a8399" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">~4/yr</text>
+
+        <!-- Apex: Flagship book — CORAL FOCAL (true pyramid peak — single triangle, consistent slope with layers below) -->
+        <polygon points="500,24 628,152 372,152" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <text x="500" y="120" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Flagship book</text>
+        <text x="500" y="136" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">every 3–5 years</text>
+        <text x="656" y="112" fill="#eb6c36" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">the apex</text>
+
+        <!-- Footnote under pyramid -->
+        <text x="500" y="384" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle" font-style="italic">The base funds the apex. The apex defines the base.</text>
+
+        <!-- Legend -->
+        <line x1="40" y1="436" x2="960" y2="436" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="40" y="452" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">LEGEND</text>
+
+        <rect x="40" y="464" width="16" height="12" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <text x="64" y="474" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Apex — rarest, highest leverage</text>
+
+        <rect x="280" y="464" width="16" height="12" fill="#ececec" stroke="rgba(45,49,66,0.25)" stroke-width="1"/>
+        <text x="304" y="474" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Supporting layer — the volume work</text>
+
+        <text x="560" y="474" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-style="italic">Layer width is honest: narrower = rarer shipping cadence.</text>
+  </g>
+
+  <!-- Explanation cards -->
+  <!-- Card 1: THE HEADLINE · One coral layer, on purpose (coral dot) -->
+  <rect x="40.5" y="808.5" width="371" height="183" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <text x="60" y="836" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">THE HEADLINE</text>
+  <circle cx="63.5" cy="852" r="3.5" fill="#eb6c36"/>
+  <text x="74" y="856" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">One coral layer, on purpose</text>
+  <line x1="60" y1="868" x2="392" y2="868" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="60" y="890">A five-colour pyramid is a children's diagram.</tspan>
+    <tspan x="60" y="910">Reserving coral for the apex makes the whole</tspan>
+    <tspan x="60" y="930">structure actually say something: this is the</tspan>
+    <tspan x="60" y="950">rarest thing you'll make, and it's the one the</tspan>
+    <tspan x="60" y="970">rest of the pyramid is feeding.</tspan>
+  </text>
+
+  <!-- Card 2: Width tells the truth (ink dot, dashed list) -->
+  <rect x="428.5" y="808.5" width="338" height="183" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="451.5" cy="835" r="3.5" fill="#2d3142"/>
+  <text x="462" y="839" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Width tells the truth</text>
+  <line x1="448" y1="851" x2="747" y2="851" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="448" y="874" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="874">~240 short posts a year</tspan>
+    <tspan x="448" y="899" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="899">~48 essays</tspan>
+    <tspan x="448" y="924" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="924">~4 long-form guides</tspan>
+    <tspan x="448" y="949" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="949">1 flagship every 3–5 years</tspan>
+  </text>
+
+  <!-- Card 3: Pyramids only work for hierarchy (muted dot) -->
+  <rect x="783.5" y="808.5" width="304" height="183" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="806.5" cy="835" r="3.5" fill="#4f5d75"/>
+  <text x="817" y="839" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Pyramids only work for hierarchy</text>
+  <line x1="803" y1="851" x2="1067" y2="851" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="803" y="873">If your four categories don't have</tspan>
+    <tspan x="803" y="893">a rarity order — if a bullet list</tspan>
+    <tspan x="803" y="913">would communicate it — use bullets.</tspan>
+    <tspan x="803" y="933">Pyramids promise you're trading</tspan>
+    <tspan x="803" y="953">volume for value as you climb.</tspan>
+  </text>
+
+  <!-- Footer -->
+  <line x1="40" y1="1024" x2="1088" y2="1024" stroke="rgba(45,49,66,0.10)" stroke-width="1"/>
+  <text x="40" y="1057" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em">content pyramid · what compounds</text>
+  <text x="1088" y="1057" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em" text-anchor="end">example · schematic skill</text>
+</svg>

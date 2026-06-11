@@ -173,7 +173,7 @@
   </header>
 
   <main>
-    <iframe id="preview" src="example-architecture.html" title="Preview"></iframe>
+    <iframe id="preview" src="example-architecture.svg" title="Preview"></iframe>
   </main>
 
   <script>
@@ -182,7 +182,7 @@
     const openRaw = document.getElementById('open-raw');
 
     function update() {
-      const src = `example-${state.type}${state.variant}.html`;
+      const src = `example-${state.type}${state.variant}.svg`;
       iframe.src = src;
       openRaw.href = src;
     }

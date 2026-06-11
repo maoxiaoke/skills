@@ -30,6 +30,6 @@
 ```
 
 ## Examples
-- `assets/example-sequence.html` — minimal light
-- `assets/example-sequence-dark.html` — minimal dark
-- `assets/example-sequence-full.html` — full editorial
+- `assets/example-sequence.svg` — minimal light
+- `assets/example-sequence-dark.svg` — minimal dark
+- `assets/example-sequence-full.svg` — full editorial

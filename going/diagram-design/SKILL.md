@@ -1,6 +1,6 @@
 ---
 name: diagram-design
-description: Create technical and product diagrams — architecture, flowchart, sequence, state machine, ER / data model, timeline, swimlane, quadrant, nested, tree, org chart, layer stack, venn, pyramid — as standalone HTML files with inline SVG. Ships with a neutral editorial skin and a first-run gate that prompts users to customize the style guide (colors, fonts) from their own website before generating. Includes annotation-callout primitive and optional sketchy variant.
+description: Create technical and product diagrams — architecture, flowchart, sequence, state machine, ER / data model, timeline, swimlane, quadrant, nested, tree, org chart, layer stack, venn, pyramid — as standalone SVG files, directly embeddable in <img>, Markdown, GitHub, and IM previews. Ships with a neutral editorial skin and a first-run gate that prompts users to customize the style guide (colors, fonts) from their own website before generating. Includes annotation-callout primitive and optional sketchy variant.
 license: MIT
 metadata:
   version: "1.0"
@@ -8,7 +8,7 @@ metadata:
 
 # Diagram Design
 
-Create visual diagrams as self-contained HTML files with inline SVG and CSS, following an opinionated editorial design system.
+Create visual diagrams as self-contained standalone SVG files — root `<svg>` with an internal `<style>` for fonts, no `<foreignObject>`, no `<script>` — following an opinionated editorial design system.
 
 Fourteen diagram types. One shared design system, complexity budget, and taste gate. Type-specific conventions live in `references/` and are loaded only when you pick a type.
 
@@ -156,9 +156,15 @@ Type-specific anti-patterns live in each `references/type-*.md`.
 
 **Mono is for technical content.** Names are Geist sans. Page title is Instrument Serif. Italic Instrument Serif is reserved for annotation callouts. Never JetBrains Mono as a blanket "dev" font.
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+Fonts load via an internal `<style>` inside the root `<svg>` — a Google Fonts `@import` plus system fallback stacks (note the `&amp;` escaping inside SVG):
+
+```svg
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');
+</style>
 ```
+
+Fallback stacks: serif `'Instrument Serif', Georgia, serif` · sans `'Geist', system-ui` · mono `'Geist Mono', ui-monospace`. Brand fonts render when the file is opened directly in a browser; embedded `<img>`/Markdown contexts fall back to system fonts gracefully.
 
 ---
 
@@ -303,34 +309,42 @@ If you exceed, split into two diagrams (overview + detail).
 
 ### Page layout
 
-1. **Header** — eyebrow (Geist Mono), title (Instrument Serif), optional subtitle (Geist muted).
-2. **Diagram container** — default: **clean, borderless**, no background — the SVG sits directly on the page paper. Optional *framed* variant (for card-heavy layouts or hero placements): `paper-2` bg + 1px `rule` border + 8px radius + `1.5rem` padding + `overflow-x: auto`.
-3. **Summary cards** — 2–3 col grid with *varied* widths (e.g., `1.1fr 1fr 0.9fr`).
-4. **Footer** — colophon in Geist Mono, muted, hairline top border.
+Everything is drawn inside the one root `<svg viewBox>` — the page *is* the SVG.
+
+1. **Background** — full-bleed `paper` rect (+ the dots pattern in the shipped templates) covering the whole viewBox.
+2. **Header** — eyebrow (Geist Mono) and title (Instrument Serif) drawn as SVG `<text>`; optional subtitle (Geist muted).
+3. **Diagram** — default: **clean, borderless**, no container background — the figure sits directly on the paper. Optional *framed* variant (for card-heavy layouts or hero placements): `paper-2` rect + 1px `rule` stroke + 8px radius behind the figure.
+4. **Summary cards** (`-full` variants) — 2–3 fixed-layout card groups with *varied* widths; text wraps via manual `<tspan>` line breaks — no responsive reflow.
+5. **Footer** (`-full` variants) — colophon in Geist Mono, muted, hairline `<line>` above.
 
 ---
 
 ## 8. Summary Card Pattern
 
-Don't use 3 identical generic cards. Vary the treatment:
+Don't use 3 identical generic cards. Vary the treatment. Cards (in `-full` variants) are fixed-layout SVG groups — rects + text, with manual `<tspan>` line breaks:
 
-```html
-<div class="card">
-  <p class="eyebrow">SECTION LABEL</p>
-  <div class="card-header">
-    <span class="card-dot coral"></span>
-    <h3>Card Title</h3>
-  </div>
-  <ul><li>Item</li></ul>
-</div>
+```svg
+<g><!-- card -->
+  <rect x="X" y="Y" width="W" height="H" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <text x="X+20" y="Y+24" fill="#7a8399" font-size="8" font-family="'Geist Mono', ui-monospace"
+        letter-spacing="0.14em">SECTION LABEL</text>
+  <circle cx="X+24" cy="Y+44" r="3.5" fill="#eb6c36"/><!-- card dot -->
+  <text x="X+36" y="Y+48" fill="#2d3142" font-size="13" font-weight="600"
+        font-family="'Geist', system-ui">Card Title</text>
+  <text x="X+20" y="Y+72" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui">
+    <tspan x="X+20" dy="0">Item — line breaks are manual,</tspan>
+    <tspan x="X+20" dy="16">budget text to the fixed card width.</tspan>
+  </text>
+</g>
 ```
 
 Rules:
-- `background: #ffffff` (not paper — slight lift without shadow)
-- `border: 1px solid rgba(45,49,66,0.12)`
-- `border-radius: 6px`, `padding: 1.25rem`
-- **No `box-shadow`**
-- Card dots: 7px, `border-radius: 50%` — ink / muted / coral / link / soft variants
+- Card fill `#ffffff` (not paper — slight lift without shadow)
+- `stroke="rgba(45,49,66,0.12)"` at 1px
+- `rx="6"`, ~20px inner padding
+- **No shadow filters**
+- Card dots: 7px circles (`r="3.5"`) — ink / muted / coral / link / soft variants
+- Fixed layout: wrap text with manual `<tspan>`s — there is no responsive reflow
 
 ---
 
@@ -377,27 +391,28 @@ Every diagram ships in three variants (see `assets/`):
 
 | Variant | File pattern | When to use |
 |---|---|---|
-| **Minimal light** (default) | `template.html`, `example-<type>.html` | Screenshot-ready. Diagram + title. Warm paper. |
-| **Minimal dark** | `template-dark.html`, `example-<type>-dark.html` | Dark mode sites, slides, high-contrast posts. |
-| **Full editorial** | `template-full.html`, `example-<type>-full.html` | Long-form posts where the diagram is the hero. |
-| **Consultant special** (quadrant only) | `example-quadrant-consultant.html` | BCG/McKinsey-style 2×2 scenario matrix. Clinical sans-serif, white bg, bold blue double-ended axes, named scenario cells. See [type-quadrant.md](references/type-quadrant.md#consultant-special-2x2-scenario-matrix). |
+| **Minimal light** (default) | `template.svg`, `example-<type>.svg` | Screenshot-ready. Diagram + title. Warm paper. |
+| **Minimal dark** | `template-dark.svg`, `example-<type>-dark.svg` | Dark mode sites, slides, high-contrast posts. Separate file — not a media query. |
+| **Full editorial** | `template-full.svg`, `example-<type>-full.svg` | Long-form posts where the diagram is the hero. Subtitle, cards, and footer drawn as fixed-layout SVG. |
+| **Consultant special** (quadrant only) | `example-quadrant-consultant.svg` | BCG/McKinsey-style 2×2 scenario matrix. Clinical sans-serif, white bg, bold blue double-ended axes, named scenario cells. See [type-quadrant.md](references/type-quadrant.md#consultant-special-2x2-scenario-matrix). |
 
 **Sketchy variant** (optional, applied to any of the above) — see [primitive-sketchy.md](references/primitive-sketchy.md). SVG turbulence filter wobbles strokes for a hand-drawn feel. Good for essays, not for technical docs.
 
 ### To create a new diagram
 
-1. Copy the variant closest to what you want (`template.html` for minimal, `template-full.html` for cards).
+1. Copy the variant closest to what you want (`template.svg` for minimal, `template-full.svg` for cards).
 2. Load the matching `references/type-<name>.md` for layout conventions.
-3. Replace the eyebrow, h1, and SVG body.
+3. Replace the eyebrow and title `<text>` elements and the diagram body.
 4. Run the §9 taste gate.
 
 ---
 
 ## 11. Output
 
-Always produce a single self-contained `.html` file:
-- Embedded CSS (no external except Google Fonts)
-- Inline SVG (no external images)
-- No JavaScript required
+Always produce a single self-contained `.svg` file:
+- Root `<svg xmlns="http://www.w3.org/2000/svg" viewBox="…" width="…" height="…">`
+- Internal `<style>` with the Google Fonts `@import` plus system fallback stacks (§5)
+- No `<foreignObject>`, no `<script>`, no external images
+- Dark variants are separate `-dark.svg` files
 
-Renders correctly in any modern browser.
+Renders correctly in any modern browser, and is directly embeddable in `<img>`, Markdown, GitHub, and IM previews — brand fonts when opened directly, graceful system-font fallback when embedded.

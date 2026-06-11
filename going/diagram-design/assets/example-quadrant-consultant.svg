@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 1232" width="1128" height="1232">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+
+  <!-- Page background (paper) -->
+  <rect width="1128" height="1232" fill="#f5f5f5"/>
+
+  <!-- Header: eyebrow + title + subtitle -->
+  <text x="40" y="48" fill="#4f5d75" font-size="10.5" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">QUADRANT · CONSULTANT SPECIAL</text>
+  <text x="40" y="92" fill="#2d3142" font-size="38" font-weight="400" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" letter-spacing="-0.02em">Workplace 2030 · Remote × AI automation</text>
+  <text x="40" y="121" fill="#4f5d75" font-size="16" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="40" y="121">Four named futures, one matrix. Scenario planning in</tspan>
+    <tspan x="40" y="146">the consultant 2×2 form — two independent drivers,</tspan>
+    <tspan x="40" y="171">four equal-weight cells, one quadrant carrying the</tspan>
+    <tspan x="40" y="196">coral bet.</tspan>
+  </text>
+
+  <!-- Diagram (original inline SVG content, repositioned; the consultant variant has no container box — transparent, borderless in the source) -->
+  <g transform="translate(64,236)">
+        <defs>
+          <!-- Double-ended axis markers -->
+          <marker id="axis-end" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+            <polygon points="0 0, 9 3.5, 0 7" fill="#2d3142"/>
+          </marker>
+          <marker id="axis-start" markerWidth="9" markerHeight="7" refX="1" refY="3.5" orient="auto">
+            <polygon points="9 0, 0 3.5, 9 7" fill="#2d3142"/>
+          </marker>
+        </defs>
+
+        <!-- Clean paper background, no dot pattern -->
+        <rect width="1000" height="660" fill="#f5f5f5"/>
+
+        <!-- Focal quadrant tint (TR) — coral at 3% -->
+        <rect x="500" y="80" width="400" height="220" fill="rgba(235,108,54,0.04)"/>
+
+        <!-- Scenario cells — store treatment with hairline rule, slightly varied -->
+        <!-- TL: Distributed humans -->
+        <rect x="140" y="120" width="300" height="160" rx="6" fill="rgba(45,49,66,0.04)" stroke="rgba(79,93,117,0.28)" stroke-width="1"/>
+        <text x="156" y="144" fill="#4f5d75" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">01 · REMOTE / HUMAN</text>
+        <text x="156" y="180" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Distributed humans</text>
+        <text x="156" y="216" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Async-first, global hiring,</text>
+        <text x="156" y="232" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Slack-heavy. Human-centric</text>
+        <text x="156" y="248" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">workflows, low AI leverage.</text>
+
+        <!-- TR: Agent teams (FOCAL) -->
+        <rect x="560" y="120" width="300" height="160" rx="6" fill="rgba(235,108,54,0.06)" stroke="#eb6c36" stroke-width="1.2"/>
+        <text x="576" y="144" fill="#eb6c36" font-size="8" font-weight="600" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">02 · REMOTE / AI</text>
+        <text x="576" y="180" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Agent teams <tspan fill="#eb6c36" font-size="13">●</tspan></text>
+        <text x="576" y="216" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Humans orchestrate; AI</text>
+        <text x="576" y="232" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">handles the routine layer.</text>
+        <text x="576" y="248" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Small, high-leverage teams.</text>
+
+        <!-- BL: Office classic -->
+        <rect x="140" y="320" width="300" height="160" rx="6" fill="rgba(45,49,66,0.04)" stroke="rgba(79,93,117,0.28)" stroke-width="1"/>
+        <text x="156" y="344" fill="#4f5d75" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">03 · IN-PERSON / HUMAN</text>
+        <text x="156" y="380" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Office classic</text>
+        <text x="156" y="416" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Return-to-office mandates,</text>
+        <text x="156" y="432" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">manual work. Techlash</text>
+        <text x="156" y="448" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">prolongs the status quo.</text>
+
+        <!-- BR: In-person + AI -->
+        <rect x="560" y="320" width="300" height="160" rx="6" fill="rgba(45,49,66,0.04)" stroke="rgba(79,93,117,0.28)" stroke-width="1"/>
+        <text x="576" y="344" fill="#4f5d75" font-size="8" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">04 · IN-PERSON / AI</text>
+        <text x="576" y="380" fill="#2d3142" font-size="16" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">In-person + AI</text>
+        <text x="576" y="416" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Smart offices, AI-augmented</text>
+        <text x="576" y="432" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">staff. Physical presence is</text>
+        <text x="576" y="448" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">the moat, AI is the lever.</text>
+
+        <!-- Axis cross — double-ended; horizontal shortened so the labels flank the tips cleanly -->
+        <line x1="200" y1="300" x2="800" y2="300"
+              stroke="#2d3142" stroke-width="1.2"
+              marker-start="url(#axis-start)" marker-end="url(#axis-end)"/>
+        <line x1="500" y1="60" x2="500" y2="540"
+              stroke="#2d3142" stroke-width="1.2"
+              marker-start="url(#axis-start)" marker-end="url(#axis-end)"/>
+
+        <!-- Axis labels — one word at each arrow tip. No glyphs, no parentheticals. -->
+        <text x="500" y="48" fill="#2d3142" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.18em">REMOTE</text>
+
+        <text x="500" y="560" fill="#2d3142" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.18em">IN-PERSON</text>
+
+        <text x="188" y="300" fill="#2d3142" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="end" dominant-baseline="middle" letter-spacing="0.18em">HUMAN</text>
+
+        <text x="812" y="300" fill="#2d3142" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="start" dominant-baseline="middle" letter-spacing="0.18em">AI</text>
+
+        <!-- Legend — horizontal strip, placed BELOW the bottom axis labels (y=560/576) -->
+        <line x1="40" y1="604" x2="960" y2="604" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <rect x="40" y="616" width="16" height="16" rx="3" fill="rgba(235,108,54,0.06)" stroke="#eb6c36" stroke-width="1"/>
+        <text x="64" y="628" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Headline bet</text>
+        <rect x="160" y="616" width="16" height="16" rx="3" fill="rgba(45,49,66,0.04)" stroke="rgba(79,93,117,0.28)" stroke-width="1"/>
+        <text x="184" y="628" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Candidate future</text>
+        <text x="304" y="628" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-style="italic">Every cell is named. The axes carry the range; the coral quadrant carries the commitment.</text>
+  </g>
+
+  <!-- Explanation cards -->
+  <!-- Card 1: THE HEADLINE · Name every future (coral dot) -->
+  <rect x="40.5" y="920.5" width="371" height="210" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <text x="60" y="948" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">THE HEADLINE</text>
+  <circle cx="63.5" cy="964" r="3.5" fill="#eb6c36"/>
+  <text x="74" y="968" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Name every future</text>
+  <line x1="60" y1="980" x2="392" y2="980" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="60" y="1002">Scenario planning fails when three of the</tspan>
+    <tspan x="60" y="1022">four cells are placeholders. Forcing a name</tspan>
+    <tspan x="60" y="1042">on each future — even the "won't happen"</tspan>
+    <tspan x="60" y="1062">ones — surfaces the assumptions hiding</tspan>
+    <tspan x="60" y="1082">in the axes.</tspan>
+  </text>
+
+  <!-- Card 2: Variant rules (ink dot, dashed list) -->
+  <rect x="428.5" y="920.5" width="338" height="210" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="451.5" cy="947" r="3.5" fill="#2d3142"/>
+  <text x="462" y="951" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Variant rules</text>
+  <line x1="448" y1="963" x2="747" y2="963" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="448" y="986" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="986">Double-ended arrows on both axes</tspan>
+    <tspan x="462" y="1006">(spectrum, not flow)</tspan>
+    <tspan x="448" y="1031" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="1031">Named cells, not plotted items</tspan>
+    <tspan x="448" y="1056" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="1056">Driver name + range on each</tspan>
+    <tspan x="462" y="1076">arrow tip</tspan>
+    <tspan x="448" y="1101" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="1101">Coral on one focal quadrant max</tspan>
+  </text>
+
+  <!-- Card 3: When to use (muted dot) -->
+  <rect x="783.5" y="920.5" width="304" height="210" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="806.5" cy="947" r="3.5" fill="#4f5d75"/>
+  <text x="817" y="951" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">When to use</text>
+  <line x1="803" y1="963" x2="1067" y2="963" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="803" y="985">Reach for the consultant 2×2 for</tspan>
+    <tspan x="803" y="1005">scenario planning, positioning</tspan>
+    <tspan x="803" y="1025">frames, or strategy sessions</tspan>
+    <tspan x="803" y="1045">where four named archetypes</tspan>
+    <tspan x="803" y="1065">beat a plotted point cloud. If</tspan>
+    <tspan x="803" y="1085">you're prioritising, use the</tspan>
+    <tspan x="803" y="1105">standard quadrant instead.</tspan>
+  </text>
+
+  <!-- Footer -->
+  <line x1="40" y1="1163" x2="1088" y2="1163" stroke="rgba(45,49,66,0.10)" stroke-width="1"/>
+  <text x="40" y="1196" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em">workplace 2030 · remote × AI automation</text>
+  <text x="1088" y="1196" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em" text-anchor="end">example · consultant special</text>
+</svg>
