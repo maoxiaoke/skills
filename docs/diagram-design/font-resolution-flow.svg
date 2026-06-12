@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1000" width="1080" height="1000">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1000" fill="#f5f5f5"/>
+
+  <!-- Header -->
+  <text x="40" y="48" fill="#4f5d75" font-size="12" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">FLOWCHART · PER-FAMILY RESOLUTION</text>
+  <text x="40" y="88" fill="#2d3142" font-size="32" font-weight="400" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" letter-spacing="-0.02em">Where does each font come from?</text>
+
+  <!-- Arrows (before boxes) -->
+  <line x1="440" y1="188" x2="440" y2="232" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <!-- D1 yes -->
+  <line x1="580" y1="300" x2="696" y2="300" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="612" y="284" width="32" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="628" y="293" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">YES</text>
+  <!-- D1 no -->
+  <line x1="440" y1="360" x2="440" y2="416" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="448" y="380" width="24" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="460" y="389" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">NO</text>
+  <!-- D2 yes -->
+  <line x1="580" y1="480" x2="696" y2="480" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="612" y="464" width="32" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="628" y="473" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">YES</text>
+  <!-- D2 no -->
+  <line x1="440" y1="540" x2="440" y2="596" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="448" y="560" width="24" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="460" y="569" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">NO</text>
+  <!-- D3 yes -->
+  <line x1="580" y1="660" x2="696" y2="660" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="612" y="644" width="32" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="628" y="653" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">YES</text>
+  <!-- D3 no (degraded path, dashed) -->
+  <line x1="440" y1="720" x2="440" y2="760" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <rect x="448" y="728" width="24" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="460" y="737" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">NO</text>
+  <!-- Warn -> End (dashed) -->
+  <line x1="440" y1="820" x2="440" y2="848" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <!-- Merge rail: R1 exit runs down and into End -->
+  <path d="M 940 300 L 1000 300 L 1000 880 L 592 880" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+  <line x1="940" y1="480" x2="996" y2="480" stroke="#4f5d75" stroke-width="1.2"/>
+  <line x1="940" y1="660" x2="996" y2="660" stroke="#4f5d75" stroke-width="1.2"/>
+  <circle cx="1000" cy="480" r="4" fill="#2d3142"/>
+  <circle cx="1000" cy="660" r="4" fill="#2d3142"/>
+
+  <!-- Start oval -->
+  <rect x="320" y="140" width="240" height="48" rx="24" fill="#f5f5f5"/>
+  <rect x="320" y="140" width="240" height="48" rx="24" fill="rgba(45,49,66,0.05)" stroke="#7a8399" stroke-width="1"/>
+  <text x="440" y="168" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Family from scan</text>
+
+  <!-- D1: Local hit? -->
+  <polygon points="440,240 580,300 440,360 300,300" fill="#f5f5f5"/>
+  <polygon points="440,240 580,300 440,360 300,300" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="440" y="298" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Local hit?</text>
+  <text x="440" y="316" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">vendor &#183; cache</text>
+
+  <!-- R1: Use local buffer -->
+  <rect x="700" y="272" width="240" height="56" rx="6" fill="#f5f5f5"/>
+  <rect x="700" y="272" width="240" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="820" y="296" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Use local buffer</text>
+  <text x="820" y="314" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">zero network</text>
+
+  <!-- D2: System font? -->
+  <polygon points="440,420 580,480 440,540 300,480" fill="#f5f5f5"/>
+  <polygon points="440,420 580,480 440,540 300,480" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="440" y="478" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">System font?</text>
+  <text x="440" y="496" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">fuzzy file match</text>
+
+  <!-- R2: Load system file -->
+  <rect x="700" y="452" width="240" height="56" rx="6" fill="#f5f5f5"/>
+  <rect x="700" y="452" width="240" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="820" y="476" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Load system file</text>
+  <text x="820" y="494" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ttf &#183; otf &#183; ttc</text>
+
+  <!-- D3: Google ttf? -->
+  <polygon points="440,600 580,660 440,720 300,660" fill="#f5f5f5"/>
+  <polygon points="440,600 580,660 440,720 300,660" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="440" y="658" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Google ttf?</text>
+  <text x="440" y="676" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">legacy-UA css2</text>
+
+  <!-- R3: Download + cache -->
+  <rect x="700" y="632" width="240" height="56" rx="6" fill="#f5f5f5"/>
+  <rect x="700" y="632" width="240" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="820" y="656" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Download &#8594; cache</text>
+  <text x="820" y="674" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">static ttf per weight</text>
+
+  <!-- R4: Warn + default (degraded) -->
+  <rect x="320" y="764" width="240" height="56" rx="6" fill="#f5f5f5"/>
+  <rect x="320" y="764" width="240" height="56" rx="6" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.20)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="440" y="788" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Warn &#183; default family</text>
+  <text x="440" y="806" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">report, never silent-drop</text>
+
+  <!-- End oval (focal) -->
+  <rect x="300" y="852" width="280" height="56" rx="28" fill="#f5f5f5"/>
+  <rect x="300" y="852" width="280" height="56" rx="28" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1.2"/>
+  <text x="440" y="876" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Render &#183; fontBuffers</text>
+  <text x="440" y="894" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">+ CJK safety net</text>
+
+  <!-- Legend -->
+  <line x1="40" y1="936" x2="1040" y2="936" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <text x="40" y="964" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.14em">LEGEND</text>
+  <rect x="160" y="948" width="28" height="16" rx="8" fill="rgba(45,49,66,0.05)" stroke="#7a8399" stroke-width="1"/>
+  <text x="196" y="964" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, sans-serif">Start / end</text>
+  <rect x="312" y="948" width="28" height="16" rx="3" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="348" y="964" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, sans-serif">Step</text>
+  <polygon points="448,948 464,956 448,964 432,956" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <text x="476" y="964" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, sans-serif">Decision</text>
+  <circle cx="588" cy="956" r="4" fill="#2d3142"/>
+  <text x="604" y="964" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, sans-serif">Merge</text>
+  <line x1="688" y1="956" x2="724" y2="956" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <text x="736" y="964" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, sans-serif">Degraded path</text>
+  <rect x="864" y="948" width="28" height="16" rx="8" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1.2"/>
+  <text x="900" y="964" fill="#4f5d75" font-size="11" font-family="'Geist', system-ui, sans-serif">Success exit</text>
+</svg>

@@ -416,3 +416,13 @@ Always produce a single self-contained `.svg` file:
 - Dark variants are separate `-dark.svg` files
 
 Renders correctly in any modern browser, and is directly embeddable in `<img>`, Markdown, GitHub, and IM previews — brand fonts when opened directly, graceful system-font fallback when embedded.
+
+### 12. PNG export
+
+When the user wants a PNG (for contexts that don't render SVG — slides, docs platforms, image uploads), convert with the bundled zero-install renderer:
+
+```bash
+node scripts/svg2png.mjs <input.svg> <output.png> [width]   # width defaults to 2160 (2x)
+```
+
+Zero-install: the renderer and brand fonts are vendored in `scripts/`, any JS runtime works, and skill-generated diagrams need no network. Font resolution, known limits, and troubleshooting live in [references/png-export.md](references/png-export.md) — read it before debugging a wrong-looking PNG.
