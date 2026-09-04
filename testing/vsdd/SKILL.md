@@ -9,7 +9,7 @@ description: Verified Spec-Driven Development — a unified AI-native methodolog
 
 ### **Overview**
 
-**Verified Spec-Driven Development (VSDD)** is a unified software engineering methodology that fuses three proven paradigms into a single AI-orchestrated pipeline
+**Verified Spec-Driven Development (VSDD)** is a unified software engineering methodology that fuses three proven paradigms into a single AI-orchestrated pipeline:
 
 - **Spec-Driven Development (SDD):** Define the contract before writing a single line of implementation. Specs are the source of truth.
 - **Test-Driven Development (TDD):** Tests are written *before* code. Red → Green → Refactor. No code exists without a failing test that demanded it.
