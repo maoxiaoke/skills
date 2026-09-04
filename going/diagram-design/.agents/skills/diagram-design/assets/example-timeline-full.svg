@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 992" width="1128" height="992">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+
+  <!-- Page background (paper) -->
+  <rect width="1128" height="992" fill="#f5f5f5"/>
+
+  <!-- Header: eyebrow + title + subtitle -->
+  <text x="40" y="48" fill="#4f5d75" font-size="10.5" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">TIMELINE · DIAGRAM DESIGN</text>
+  <text x="40" y="92" fill="#2d3142" font-size="38" font-weight="400" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" letter-spacing="-0.02em">Product launch · fourteen months</text>
+  <text x="40" y="121" fill="#4f5d75" font-size="16" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="40" y="121">Five design moments from the first post to the current</tspan>
+    <tspan x="40" y="146">schematic overhaul. Spacing is proportional to calendar</tspan>
+    <tspan x="40" y="171">time — the five-month gap between v1 and v2 is genuinely</tspan>
+    <tspan x="40" y="196">wider on the page.</tspan>
+  </text>
+
+  <!-- Diagram container -->
+  <rect x="40.5" y="236.5" width="1047" height="467" rx="8" fill="#ececec" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+
+  <!-- Diagram (original inline SVG content, repositioned inside container) -->
+  <g transform="translate(64,260)">
+        <defs>
+          <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="rgba(45,49,66,0.10)"/>
+          </pattern>
+        </defs>
+
+        <rect width="1000" height="420" fill="#f5f5f5"/>
+        <rect width="1000" height="420" fill="url(#dots)" opacity="0.55"/>
+
+        <!-- Year markers (background) -->
+        <text x="60" y="340" fill="rgba(45,49,66,0.06)" font-size="72" font-weight="600" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace">2025</text>
+        <text x="700" y="340" fill="rgba(45,49,66,0.06)" font-size="72" font-weight="600" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace">2026</text>
+
+        <!-- Baseline -->
+        <line x1="80" y1="240" x2="920" y2="240" stroke="rgba(79,93,117,0.45)" stroke-width="1"/>
+
+        <!-- Year boundary tick (between 2025 and 2026) -->
+        <line x1="680" y1="232" x2="680" y2="248" stroke="rgba(45,49,66,0.20)" stroke-width="1"/>
+        <text x="680" y="260" fill="#7a8399" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">JAN '26</text>
+
+        <!-- Start / end caps -->
+        <line x1="80" y1="232" x2="80" y2="248" stroke="rgba(45,49,66,0.20)" stroke-width="1"/>
+        <line x1="920" y1="232" x2="920" y2="248" stroke="rgba(45,49,66,0.20)" stroke-width="1"/>
+
+        <!-- Event 1: FEB 2025 · First post (below) -->
+        <line x1="100" y1="240" x2="100" y2="296" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <circle cx="100" cy="240" r="4" fill="#2d3142"/>
+        <text x="100" y="312" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">FEB 2025</text>
+        <text x="100" y="328" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">First post</text>
+
+        <!-- Event 2: APR 2025 · Design v1 (above) -->
+        <line x1="240" y1="184" x2="240" y2="240" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <circle cx="240" cy="240" r="4" fill="#2d3142"/>
+        <text x="240" y="156" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">APR 2025</text>
+        <text x="240" y="172" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Design v1</text>
+
+        <!-- Event 3: SEP 2025 · Design v2 (below) -->
+        <line x1="500" y1="240" x2="500" y2="296" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <circle cx="500" cy="240" r="4" fill="#2d3142"/>
+        <text x="500" y="312" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">SEP 2025</text>
+        <text x="500" y="328" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Design v2</text>
+        <text x="500" y="344" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">typography pass</text>
+
+        <!-- Event 4: JAN 2026 · Design v3 (above, coral major) -->
+        <line x1="740" y1="160" x2="740" y2="240" stroke="#eb6c36" stroke-width="1"/>
+        <circle cx="740" cy="240" r="6" fill="#eb6c36"/>
+        <text x="740" y="128" fill="#eb6c36" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">JAN 2026</text>
+        <text x="740" y="148" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Design v3</text>
+        <text x="740" y="164" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">complexity budget</text>
+
+        <!-- Event 5: APR 2026 · now · Diagram Design skill (below, coral) -->
+        <line x1="900" y1="240" x2="900" y2="296" stroke="#eb6c36" stroke-width="1"/>
+        <circle cx="900" cy="240" r="6" fill="#eb6c36"/>
+        <text x="900" y="312" fill="#eb6c36" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">APR 2026 · NOW</text>
+        <text x="900" y="328" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Schematic skill</text>
+        <text x="900" y="344" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">eight diagram types</text>
+
+        <!-- Legend -->
+        <line x1="40" y1="376" x2="960" y2="376" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="40" y="392" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">LEGEND</text>
+
+        <circle cx="52" cy="408" r="4" fill="#2d3142"/>
+        <text x="68" y="412" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Event</text>
+
+        <circle cx="148" cy="408" r="6" fill="#eb6c36"/>
+        <text x="164" y="412" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Major milestone</text>
+
+        <text x="296" y="412" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-style="italic">Spacing is proportional to real elapsed time.</text>
+  </g>
+
+  <!-- Explanation cards -->
+  <!-- Card 1: THE HEADLINE · v3 set the complexity budget (coral dot) -->
+  <rect x="40.5" y="728.5" width="371" height="163" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <text x="60" y="756" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">THE HEADLINE</text>
+  <circle cx="63.5" cy="772" r="3.5" fill="#eb6c36"/>
+  <text x="74" y="776" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">v3 set the complexity budget</text>
+  <line x1="60" y1="788" x2="392" y2="788" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="60" y="810">January's design overhaul is the pivot — the</tspan>
+    <tspan x="60" y="830">rule that no diagram exceeds nine components</tspan>
+    <tspan x="60" y="850">comes from there, and it's why this skill</tspan>
+    <tspan x="60" y="870">exists in the form it does.</tspan>
+  </text>
+
+  <!-- Card 2: Honest spacing (ink dot, dashed list) -->
+  <rect x="428.5" y="728.5" width="338" height="163" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="451.5" cy="755" r="3.5" fill="#2d3142"/>
+  <text x="462" y="759" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Honest spacing</text>
+  <line x1="448" y1="771" x2="747" y2="771" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="448" y="794" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="794">5 months between v1 and v2</tspan>
+    <tspan x="448" y="819" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="819">4 months between v2 and v3</tspan>
+    <tspan x="448" y="844" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="844">3 months between v3 and now</tspan>
+    <tspan x="448" y="869" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="869">Cadence is tightening, not gaming the axis</tspan>
+  </text>
+
+  <!-- Card 3: Alternate label placement (muted dot) -->
+  <rect x="783.5" y="728.5" width="304" height="163" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="806.5" cy="755" r="3.5" fill="#4f5d75"/>
+  <text x="817" y="759" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Alternate label placement</text>
+  <line x1="803" y1="771" x2="1067" y2="771" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="803" y="793">Above / below flipping prevents</tspan>
+    <tspan x="803" y="813">label collision without forcing a</tspan>
+    <tspan x="803" y="833">second row. Five events on one</tspan>
+    <tspan x="803" y="853">baseline stays legible.</tspan>
+  </text>
+
+  <!-- Footer -->
+  <line x1="40" y1="924" x2="1088" y2="924" stroke="rgba(45,49,66,0.10)" stroke-width="1"/>
+  <text x="40" y="957" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em">product · design lineage</text>
+  <text x="1088" y="957" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em" text-anchor="end">example · schematic skill</text>
+</svg>

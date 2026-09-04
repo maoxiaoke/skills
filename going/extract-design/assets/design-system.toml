@@ -1,0 +1,421 @@
+# Framework-neutral design token template inspired by Google Stitch DESIGN.md.
+# Specification: https://stitch.withgoogle.com/docs/design-md/specification/
+#
+# This TOML represents the machine-readable token layer. Empty values are
+# fields to populate; concrete examples appear only in comments. Unknown token
+# names and extension tables are allowed when their values are valid.
+#
+# Tailwind export is deterministic rather than duplicated:
+# colors.primary                  -> --color-primary
+# fonts.sans                      -> --font-sans
+# typography.body-md.fontSize     -> --text-body-md
+# typography.body-md.lineHeight   -> --text-body-md--line-height
+# spacing.sm                      -> --spacing-sm
+# rounded.md                      -> --radius-md
+# breakpoints.md                  -> --breakpoint-md
+# containers.content             -> --container-content
+# shadows.sm                      -> --shadow-sm
+# motion.ease-standard            -> --ease-standard
+# motion.animate-fade-in          -> --animate-fade-in
+
+version = "alpha"
+name = ""
+description = ""
+
+# Example:
+# name = "Northstar Web"
+# description = "Calm, compact, content-first interface."
+
+[metadata]
+platforms = []
+defaultTheme = ""
+availableThemes = []
+
+# Example:
+# platforms = ["web", "responsive-web"]
+# defaultTheme = "light"
+# availableThemes = ["light", "dark"]
+
+# Scalable dimensions use rem as the canonical value. The root size makes px
+# conversion deterministic. Keep fixed icon sizes, strokes, and hairlines in px.
+
+[units]
+rootFontSizePx = 16
+scalableUnit = "rem"
+fixedUnit = "px"
+outputs = ["rem", "px"]
+
+# Example:
+# fontSize = "1rem" # 16px
+# section = "3rem" # 48px
+# defaultSize = "20px" # fixed icon size
+
+# Base font-family tokens and loading metadata. Typography roles reference these
+# primitives with Stitch-style paths such as {fonts.sans}.
+
+[fonts]
+sans = ""
+mono = ""
+serif = ""
+sansSource = ""
+monoSource = ""
+serifSource = ""
+loading = ""
+
+# Example:
+# sans = "Inter, ui-sans-serif, system-ui, sans-serif"
+# mono = "JetBrains Mono, ui-monospace, SFMono-Regular, monospace"
+# serif = ""
+# sansSource = "@fontsource/inter"
+# monoSource = "self-hosted"
+# serifSource = ""
+# loading = "woff2 with font-display: swap"
+
+# Iconography is an open extension to the Stitch core schema.
+
+[icons]
+library = ""
+package = ""
+source = ""
+format = ""
+style = ""
+defaultSize = ""
+sizes = []
+strokeWidth = ""
+strokeLinecap = ""
+strokeLinejoin = ""
+fill = ""
+color = ""
+
+# Example:
+# library = "Lucide"
+# package = "lucide-react"
+# source = "https://lucide.dev/"
+# format = "svg-component"
+# style = "outline"
+# defaultSize = "20px"
+# sizes = ["12px", "16px", "20px", "24px"]
+# strokeWidth = "1.5px"
+# strokeLinecap = "round"
+# strokeLinejoin = "round"
+# fill = "none"
+# color = "currentColor"
+
+# Colors are sRGB hex values. Token references use {path.to.token}. Names are
+# semantic and extensible; raw palette steps may live in this same flat map.
+
+[colors]
+background = ""
+foreground = ""
+surface = ""
+"on-surface" = ""
+"surface-muted" = ""
+muted = ""
+"on-muted" = ""
+border = ""
+"border-strong" = ""
+ring = ""
+overlay = ""
+primary = ""
+"on-primary" = ""
+"primary-hover" = ""
+"primary-active" = ""
+secondary = ""
+"on-secondary" = ""
+"secondary-hover" = ""
+"secondary-active" = ""
+tertiary = ""
+"on-tertiary" = ""
+info = ""
+"on-info" = ""
+success = ""
+"on-success" = ""
+warning = ""
+"on-warning" = ""
+error = ""
+"on-error" = ""
+
+# Examples:
+# background = "#F8FAFC"
+# foreground = "#0F172A"
+# surface = "#FFFFFF"
+# "on-surface" = "#0F172A"
+# border = "#E2E8F0"
+# ring = "#3B82F6"
+# overlay = "#0F172A8F"
+# primary = "#2563EB"
+# "on-primary" = "#FFFFFF"
+# "primary-hover" = "#1D4ED8"
+# secondary = "#F1F5F9"
+# "on-secondary" = "#0F172A"
+# error = "#EF4444"
+# "on-error" = "#FFFFFF"
+# "neutral-50" = "#F8FAFC"
+# "neutral-900" = "#0F172A"
+
+# Typography tokens are composite objects. Recommended semantic roles come from
+# the Stitch specification; project-specific role names are also valid.
+
+[typography.headline-display]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.headline-lg]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.headline-md]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.body-lg]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.body-md]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.body-sm]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.label-lg]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.label-md]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+[typography.label-sm]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+# Monospace is retained as a normalized extension for product and code UI.
+
+[typography.code-md]
+fontFamily = ""
+fontSize = ""
+fontWeight = ""
+lineHeight = ""
+letterSpacing = ""
+fontFeature = ""
+fontVariation = ""
+
+# Example:
+# [typography.body-md]
+# fontFamily = "{fonts.sans}"
+# fontSize = "1rem" # 16px
+# fontWeight = 400
+# lineHeight = 1.5
+# letterSpacing = "0em"
+# fontFeature = ""
+# fontVariation = ""
+
+[rounded]
+none = ""
+sm = ""
+md = ""
+lg = ""
+xl = ""
+full = ""
+
+# Examples:
+# none = "0px"
+# sm = "0.25rem" # 4px
+# md = "0.5rem" # 8px
+# lg = "0.75rem" # 12px
+# xl = "1rem" # 16px
+# full = "9999px"
+
+[spacing]
+base = ""
+xs = ""
+sm = ""
+md = ""
+lg = ""
+xl = ""
+"2xl" = ""
+gutter = ""
+margin = ""
+controlX = ""
+controlY = ""
+stack = ""
+section = ""
+
+# Examples:
+# base = "0.25rem" # 4px
+# xs = "0.25rem" # 4px
+# sm = "0.5rem" # 8px
+# md = "1rem" # 16px
+# lg = "2rem" # 32px
+# xl = "4rem" # 64px
+# gutter = "1.5rem" # 24px
+# margin = "2rem" # 32px
+
+# Component tokens are optional. Add only components supported by repeated
+# source evidence. Variants are separate related entries.
+
+[components]
+
+# Example:
+# [components.button-primary]
+# backgroundColor = "{colors.primary}"
+# textColor = "{colors.on-primary}"
+# typography = "{typography.label-lg}"
+# rounded = "{rounded.md}"
+# padding = "{spacing.sm}"
+# height = "2.5rem" # 40px
+#
+# [components.button-primary-hover]
+# backgroundColor = "{colors.primary-hover}"
+
+# The following tables are open extensions. Their names map directly to common
+# Tailwind theme namespaces where a corresponding namespace exists.
+
+[breakpoints]
+sm = ""
+md = ""
+lg = ""
+xl = ""
+"2xl" = ""
+
+# Examples:
+# sm = "36rem" # 576px
+# md = "48rem" # 768px
+# lg = "64rem" # 1024px
+# xl = "80rem" # 1280px
+# "2xl" = "96rem" # 1536px
+
+[containers]
+content = ""
+default = ""
+wide = ""
+
+# Examples:
+# content = "45rem" # 720px
+# default = "75rem" # 1200px
+# wide = "90rem" # 1440px
+
+[shadows]
+none = ""
+xs = ""
+sm = ""
+md = ""
+lg = ""
+xl = ""
+
+# Examples:
+# none = "0 0 #00000000"
+# xs = "0 1px 2px #0F172A0F"
+# sm = "0 2px 6px #0F172A14"
+# md = "0 8px 24px #0F172A1A"
+# lg = "0 16px 40px #0F172A24"
+# xl = "0 24px 64px #0F172A2E"
+
+[motion]
+"ease-standard" = ""
+"ease-enter" = ""
+"ease-exit" = ""
+"ease-move" = ""
+"animate-fade-in" = ""
+"animate-fade-out" = ""
+"animate-scale-in" = ""
+"animate-scale-out" = ""
+
+# Examples:
+# "ease-standard" = "cubic-bezier(0.2, 0, 0, 1)"
+# "ease-enter" = "cubic-bezier(0.19, 1, 0.22, 1)"
+# "ease-exit" = "cubic-bezier(0.8, 0, 0.4, 1)"
+# "ease-move" = "cubic-bezier(0.65, 0, 0.35, 1)"
+# "animate-fade-in" = "fade-in 150ms {motion.ease-enter}"
+# "animate-fade-out" = "fade-out 100ms {motion.ease-exit}"
+
+[layout]
+gridColumns = ""
+gridGutter = ""
+pageMargin = ""
+pagePadding = ""
+
+# Example:
+# gridColumns = 12
+# gridGutter = "{spacing.gutter}"
+# pageMargin = "{spacing.margin}"
+# pagePadding = "{spacing.lg}"
+
+[variants]
+hover = ""
+active = ""
+focus = ""
+selected = ""
+disabled = ""
+loading = ""
+
+# Example:
+# hover = "hover"
+# active = "active"
+# focus = "focus-visible"
+# selected = "aria-selected"
+# disabled = "disabled"
+# loading = "data-loading=true"
+
+[implementation]
+cssVariablePrefix = ""
+outputTargets = []
+
+# Example:
+# cssVariablePrefix = "--"
+# outputTargets = ["tailwind-css", "css", "typescript"]
+
+[extensions]
+
+# Preserve valid source-specific facts here instead of forcing them into an
+# unrelated canonical group. Unknown tables and keys are allowed by design.
+# Example:
+# productDensity = "0.92"

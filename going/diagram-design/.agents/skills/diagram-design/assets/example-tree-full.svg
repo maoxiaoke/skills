@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1112 1096" width="1112" height="1096">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="rgba(45,49,66,0.10)"/>
+    </pattern>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1112" height="1096" fill="#f5f5f5"/>
+  <rect width="1112" height="1096" fill="url(#dots)" opacity="0.55"/>
+
+  <!-- Header (redrawn from HTML wrapper) -->
+  <text x="32" y="58" fill="#4f5d75" font-size="10.5" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">TREE · DIAGRAM DESIGN</text>
+  <text x="32" y="104" fill="#2d3142" font-size="40" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" letter-spacing="-0.02em">Claude Code skill taxonomy</text>
+  <text x="32" y="134" fill="#4f5d75" font-size="16" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="32" dy="0">Three tiers, one root. The full skill library fans out</tspan>
+    <tspan x="32" dy="25">from a single idea — and every leaf descends through</tspan>
+    <tspan x="32" dy="25">exactly one category. Orthogonal connectors, one coral</tspan>
+    <tspan x="32" dy="25">accent, nothing else.</tspan>
+  </text>
+
+  <!-- Diagram container -->
+  <rect x="32" y="255" width="1048" height="528" rx="8" fill="#ececec" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+
+  <!-- Diagram (original inline SVG content, viewBox 0 0 1000 480) -->
+  <g transform="translate(56,279)">
+    <rect width="1000" height="480" fill="#f5f5f5"/>
+    <rect width="1000" height="480" fill="url(#dots)" opacity="0.55"/>
+
+    <!-- Tier tags (left margin) -->
+    <text x="40" y="108" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">TIER 0 · ROOT</text>
+    <text x="40" y="224" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em" text-anchor="start">TIER 1</text>
+    <text x="40" y="324" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em" text-anchor="start">TIER 2</text>
+
+    <!-- Connectors drawn first (behind nodes) -->
+    <!-- Root → Tier 1 bus -->
+    <path d="M 500 128 L 500 168 L 220 168 L 220 208" fill="none" stroke="#4f5d75" stroke-width="1"/>
+    <path d="M 500 168 L 500 208" fill="none" stroke="#4f5d75" stroke-width="1"/>
+    <path d="M 500 168 L 780 168 L 780 208" fill="none" stroke="#4f5d75" stroke-width="1"/>
+
+    <!-- Design → leaves -->
+    <path d="M 220 256 L 220 296 L 140 296 L 140 336" fill="none" stroke="#4f5d75" stroke-width="1"/>
+    <path d="M 220 296 L 300 296 L 300 336" fill="none" stroke="#4f5d75" stroke-width="1"/>
+
+    <!-- Engineering → leaves -->
+    <path d="M 500 256 L 500 296 L 480 296 L 480 336" fill="none" stroke="#4f5d75" stroke-width="1"/>
+    <path d="M 500 296 L 660 296 L 660 336" fill="none" stroke="#4f5d75" stroke-width="1"/>
+
+    <!-- Research → single leaf -->
+    <path d="M 780 256 L 780 296 L 840 296 L 840 336" fill="none" stroke="#4f5d75" stroke-width="1"/>
+
+    <!-- Root node: Skills (coral focal) -->
+    <rect x="420" y="80" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="420" y="80" width="160" height="48" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+    <rect x="428" y="88" width="32" height="12" rx="2" fill="transparent" stroke="rgba(235,108,54,0.50)" stroke-width="0.8"/>
+    <text x="444" y="97" fill="#eb6c36" font-size="7" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.08em">ROOT</text>
+    <text x="500" y="118" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Skills</text>
+
+    <!-- Tier 1: Design -->
+    <rect x="140" y="208" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="140" y="208" width="160" height="48" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <rect x="148" y="216" width="28" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+    <text x="162" y="225" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.08em">CAT</text>
+    <text x="220" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Design</text>
+    <text x="220" y="252" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">ui · visual · ux</text>
+
+    <!-- Tier 1: Engineering -->
+    <rect x="420" y="208" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="420" y="208" width="160" height="48" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <rect x="428" y="216" width="28" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+    <text x="442" y="225" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.08em">CAT</text>
+    <text x="500" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Engineering</text>
+    <text x="500" y="252" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">ship · review · test</text>
+
+    <!-- Tier 1: Research -->
+    <rect x="700" y="208" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="700" y="208" width="160" height="48" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <rect x="708" y="216" width="28" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+    <text x="722" y="225" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.08em">CAT</text>
+    <text x="780" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Research</text>
+    <text x="780" y="252" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">investigate · analyze</text>
+
+    <!-- Tier 2: polish -->
+    <rect x="60" y="336" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="60" y="336" width="160" height="48" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+    <text x="140" y="360" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">polish</text>
+    <text x="140" y="372" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">align · space · rhythm</text>
+
+    <!-- Tier 2: critique -->
+    <rect x="220" y="336" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="220" y="336" width="160" height="48" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+    <text x="300" y="360" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">critique</text>
+    <text x="300" y="372" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">hierarchy · density</text>
+
+    <!-- Tier 2: review -->
+    <rect x="400" y="336" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="400" y="336" width="160" height="48" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+    <text x="480" y="360" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">review</text>
+    <text x="480" y="372" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">pre-land diff · sql</text>
+
+    <!-- Tier 2: ship -->
+    <rect x="580" y="336" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="580" y="336" width="160" height="48" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+    <text x="660" y="360" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">ship</text>
+    <text x="660" y="372" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">merge · deploy · verify</text>
+
+    <!-- Tier 2: investigate -->
+    <rect x="760" y="336" width="160" height="48" rx="6" fill="#f5f5f5"/>
+    <rect x="760" y="336" width="160" height="48" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+    <text x="840" y="360" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">investigate</text>
+    <text x="840" y="372" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">root cause · evidence</text>
+
+    <!-- Legend strip -->
+    <line x1="40" y1="412" x2="960" y2="412" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+    <text x="40" y="428" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">LEGEND</text>
+
+    <rect x="40" y="444" width="14" height="10" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+    <text x="60" y="452" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Root · focal</text>
+
+    <rect x="180" y="444" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <text x="200" y="452" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Category branch</text>
+
+    <rect x="340" y="444" width="14" height="10" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+    <text x="360" y="452" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Leaf skill</text>
+
+    <text x="500" y="452" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-style="italic">Orthogonal connectors only. Coral marks the root — every branch descends from one idea.</text>
+  </g>
+
+  <!-- Explanation cards (redrawn from HTML .cards grid, columns 1.1fr / 1fr / 0.9fr) -->
+  <!-- Card 1: The headline -->
+  <g>
+    <rect x="32" y="807" width="372" height="192" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+    <text x="52" y="833" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">THE HEADLINE</text>
+    <circle cx="56" cy="851" r="3.5" fill="#eb6c36"/>
+    <text x="67" y="855" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">One root, one coral dot</text>
+    <line x1="52" y1="867" x2="384" y2="867" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+    <text x="52" y="887" fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+      <tspan x="52" dy="0">A taxonomy is a promise: every child</tspan>
+      <tspan x="52" dy="20">has exactly one parent. Coral lives on</tspan>
+      <tspan x="52" dy="20">the root because that's the only node</tspan>
+      <tspan x="52" dy="20">the tree is actually about — everything</tspan>
+      <tspan x="52" dy="20">else is a descent.</tspan>
+    </text>
+  </g>
+
+  <!-- Card 2: Connectors are orthogonal -->
+  <g>
+    <rect x="420" y="807" width="339" height="192" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+    <circle cx="444" cy="834" r="3.5" fill="#2d3142"/>
+    <text x="455" y="838" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Connectors are orthogonal</text>
+    <line x1="440" y1="850" x2="739" y2="850" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+    <text x="440" y="872" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+      <tspan x="440" dy="0" fill="rgba(45,49,66,0.25)">—</tspan><tspan dx="5" fill="#4f5d75">Parent drops vertical</tspan>
+      <tspan x="440" dy="25" fill="rgba(45,49,66,0.25)">—</tspan><tspan dx="5" fill="#4f5d75">Horizontal bus connects siblings</tspan>
+      <tspan x="440" dy="25" fill="rgba(45,49,66,0.25)">—</tspan><tspan dx="5" fill="#4f5d75">Each child drops into its top edge</tspan>
+      <tspan x="440" dy="25" fill="rgba(45,49,66,0.25)">—</tspan><tspan dx="5" fill="#4f5d75">No diagonals, no curves</tspan>
+    </text>
+  </g>
+
+  <!-- Card 3: Uneven breadth is honest -->
+  <g>
+    <rect x="775" y="807" width="305" height="192" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+    <circle cx="799" cy="834" r="3.5" fill="#4f5d75"/>
+    <text x="810" y="838" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Uneven breadth is honest</text>
+    <line x1="795" y1="850" x2="1060" y2="850" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+    <text x="795" y="872" fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+      <tspan x="795" dy="0">Design and Engineering fan to two</tspan>
+      <tspan x="795" dy="20">leaves; Research drops to one. The</tspan>
+      <tspan x="795" dy="20">layout reflects the real shape of the</tspan>
+      <tspan x="795" dy="20">library, not a forced symmetry.</tspan>
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="32" y1="1031" x2="1080" y2="1031" stroke="rgba(45,49,66,0.10)" stroke-width="1"/>
+  <text x="32" y="1059" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em">claude code skill taxonomy</text>
+  <text x="1080" y="1059" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em" text-anchor="end">example · schematic skill</text>
+</svg>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 1114" width="1128" height="1114">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+
+  <!-- Page background (paper) -->
+  <rect width="1128" height="1114" fill="#f5f5f5"/>
+
+  <!-- Header: eyebrow + title + subtitle -->
+  <text x="40" y="48" fill="#4f5d75" font-size="10.5" font-weight="500" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">VENN · DIAGRAM DESIGN</text>
+  <text x="40" y="92" fill="#2d3142" font-size="38" font-weight="400" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" letter-spacing="-0.02em">Good design · Desirable × Feasible × Viable</text>
+  <text x="40" y="121" fill="#4f5d75" font-size="16" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="40" y="121">Three tests every product has to pass before it earns the</tspan>
+    <tspan x="40" y="146">word "shippable." Miss one and you get a prototype, a</tspan>
+    <tspan x="40" y="171">vaporware demo, or an internal tool nobody asked for.</tspan>
+    <tspan x="40" y="196">Coral marks the intersection worth the work.</tspan>
+  </text>
+
+  <!-- Diagram container -->
+  <rect x="40.5" y="236.5" width="1047" height="547" rx="8" fill="#ececec" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+
+  <!-- Diagram (original inline SVG content, repositioned inside container) -->
+  <g transform="translate(64,260)">
+        <defs>
+          <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="rgba(45,49,66,0.10)"/>
+          </pattern>
+          <clipPath id="clip-center">
+            <circle cx="500" cy="180" r="140"/>
+          </clipPath>
+          <clipPath id="clip-center-2">
+            <circle cx="428" cy="320" r="140"/>
+          </clipPath>
+        </defs>
+
+        <rect width="1000" height="500" fill="#f5f5f5"/>
+        <rect width="1000" height="500" fill="url(#dots)" opacity="0.55"/>
+
+        <!-- Three set circles (stroke + very-low-opacity tint; tints compound in overlaps) -->
+        <!-- Desirable — top, ink -->
+        <circle cx="500" cy="180" r="140" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/>
+        <!-- Feasible — bottom-left, muted -->
+        <circle cx="428" cy="320" r="140" fill="rgba(79,93,117,0.05)" stroke="#4f5d75" stroke-width="1"/>
+        <!-- Viable — bottom-right, soft -->
+        <circle cx="572" cy="320" r="140" fill="rgba(122,131,153,0.05)" stroke="#7a8399" stroke-width="1"/>
+
+        <!-- Coral focal tint on the all-three intersection -->
+        <g clip-path="url(#clip-center)">
+          <g clip-path="url(#clip-center-2)">
+            <circle cx="572" cy="320" r="140" fill="rgba(235,108,54,0.10)"/>
+          </g>
+        </g>
+
+        <!-- Set labels -->
+        <text x="500" y="20" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Desirable</text>
+        <text x="500" y="36" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">PEOPLE WANT IT</text>
+
+        <text x="152" y="400" fill="#4f5d75" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="start">Feasible</text>
+        <text x="152" y="416" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="start" letter-spacing="0.14em">WE CAN BUILD IT</text>
+
+        <text x="848" y="400" fill="#7a8399" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="end">Viable</text>
+        <text x="848" y="416" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="end" letter-spacing="0.14em">BUSINESS SUSTAINS</text>
+
+        <!-- Pairwise intersection labels -->
+        <text x="360" y="232" fill="#4f5d75" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Prototype</text>
+        <text x="360" y="248" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">no business model</text>
+
+        <text x="640" y="232" fill="#4f5d75" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Vaporware</text>
+        <text x="640" y="248" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">can't build it</text>
+
+        <text x="500" y="368" fill="#4f5d75" font-size="12" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Internal tool</text>
+        <text x="500" y="384" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">nobody wants it</text>
+
+        <!-- Focal: all-three center -->
+        <text x="500" y="260" fill="#eb6c36" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" text-anchor="middle">Shippable</text>
+        <text x="500" y="276" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">THE SWEET SPOT</text>
+
+        <!-- Legend strip -->
+        <line x1="40" y1="456" x2="960" y2="456" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="40" y="472" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">LEGEND</text>
+
+        <circle cx="52" cy="488" r="6" fill="none" stroke="#eb6c36" stroke-width="1.2"/>
+        <text x="68" y="492" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">All three — ship it</text>
+
+        <circle cx="192" cy="488" r="6" fill="none" stroke="#4f5d75" stroke-width="1"/>
+        <text x="208" y="492" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">Two of three — incomplete</text>
+
+        <text x="380" y="492" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-style="italic">Coral marks the intersection that earns the work. The others name the traps.</text>
+  </g>
+
+  <!-- Explanation cards -->
+  <!-- Card 1: THE HEADLINE · One sweet spot, in coral (coral dot) -->
+  <rect x="40.5" y="808.5" width="371" height="205" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <text x="60" y="836" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.18em">THE HEADLINE</text>
+  <circle cx="63.5" cy="852" r="3.5" fill="#eb6c36"/>
+  <text x="74" y="856" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">One sweet spot, in coral</text>
+  <line x1="60" y1="868" x2="392" y2="868" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="60" y="890">Three overlapping circles create seven</tspan>
+    <tspan x="60" y="910">regions. Six of them are diagnostic — they</tspan>
+    <tspan x="60" y="930">name the failure mode. Only the center</tspan>
+    <tspan x="60" y="950">earns the coral. If every region is colored,</tspan>
+    <tspan x="60" y="970">the diagram stops prioritizing anything.</tspan>
+  </text>
+
+  <!-- Card 2: The three tests (ink dot, dashed list) -->
+  <rect x="428.5" y="808.5" width="338" height="205" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="451.5" cy="835" r="3.5" fill="#2d3142"/>
+  <text x="462" y="839" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">The three tests</text>
+  <line x1="448" y1="851" x2="747" y2="851" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="448" y="874" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="874">Desirable — someone pulls for it</tspan>
+    <tspan x="448" y="899" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="899">Feasible — the team can actually build it</tspan>
+    <tspan x="448" y="924" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="924">Viable — the economics hold up over time</tspan>
+    <tspan x="448" y="949" fill="rgba(45,49,66,0.25)" font-size="12">—</tspan><tspan x="462" y="949">All three, or you don't ship</tspan>
+  </text>
+
+  <!-- Card 3: The named traps (muted dot) -->
+  <rect x="783.5" y="808.5" width="304" height="205" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+  <circle cx="806.5" cy="835" r="3.5" fill="#4f5d75"/>
+  <text x="817" y="839" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">The named traps</text>
+  <line x1="803" y1="851" x2="1067" y2="851" stroke="rgba(45,49,66,0.08)" stroke-width="1"/>
+  <text fill="#4f5d75" font-size="13" font-family="'Geist', system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <tspan x="803" y="873">Prototype (loved, buildable, no</tspan>
+    <tspan x="803" y="893">model). Vaporware (loved,</tspan>
+    <tspan x="803" y="913">profitable, un-buildable). Internal</tspan>
+    <tspan x="803" y="933">tool (buildable, profitable,</tspan>
+    <tspan x="803" y="953">unloved). Labeling each one</tspan>
+    <tspan x="803" y="973">makes the map more useful than</tspan>
+    <tspan x="803" y="993">the center alone.</tspan>
+  </text>
+
+  <!-- Footer -->
+  <line x1="40" y1="1046" x2="1088" y2="1046" stroke="rgba(45,49,66,0.10)" stroke-width="1"/>
+  <text x="40" y="1079" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em">good design · desirable × feasible × viable</text>
+  <text x="1088" y="1079" fill="#7a8399" font-size="11.5" font-family="'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.06em" text-anchor="end">example · schematic skill</text>
+</svg>
